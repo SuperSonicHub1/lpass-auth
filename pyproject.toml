@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "lpass-auth"
-version = "0.1.0"
+version = "1.0.0"
 description = "A command-line client for LastPass Authenticator."
 authors = ["Kyle Anthony Williams <kyle.anthony.williams2@gmail.com>"]
 license = "Unlicense"
 readme = "README.md"
-homepage = "https://github.com/SuperSonicHub1/lesspass-client"
-repository = "https://github.com/SuperSonicHub1/lesspass-client"
-documentation = "https://github.com/SuperSonicHub1/lesspass-client#readme"
+homepage = "https://github.com/SuperSonicHub1/lpass-auth"
+repository = "https://github.com/SuperSonicHub1/lpass-auth"
+documentation = "https://github.com/SuperSonicHub1/lpass-auth#readme"
 keywords = [
 	"lastpass",
 	"cli",
@@ -24,6 +24,8 @@ python = "^3.8"
 requests = "^2.26.0"
 pycryptodome = "^3.11.0"
 pyotp = "^2.6.0"
+keyring = "^23.2.1"
+SecretStorage = "^3.3.1"
 
 [tool.poetry.dev-dependencies]
 
