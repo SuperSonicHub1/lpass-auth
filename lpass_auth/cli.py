@@ -14,6 +14,8 @@ def main():
 	subparsers = parser.add_subparsers(help='Sub-command help', dest='command', required=True)
 
 	parser_sync = subparsers.add_parser("sync", help="Sync your collection of accounts to your keychain.")
+	parser_sync.add_argument("-o", "--one-time-password", dest="otp", help="Your one-time password (default: collected interactively)")
+	parser_sync.add_argument("-u", "--username", help="Your email/username (default: collected interactively)")
 
 	parser_ls = subparsers.add_parser("ls", help="View your collection of accounts.")
 
@@ -32,9 +34,9 @@ def main():
 	args = parser.parse_args()
 
 	if args.command == "sync":
-		username = input("Username: ")
+		username = args.username or input("Username: ")
 		password = getpass("Master Password: ")
-		otp = input("OTP (if applicable): ")
+		otp = args.otp or input("OTP (if applicable): ")
 		try:
 			# Verify it's an integer but don't change anything
 			int(otp)
