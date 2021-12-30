@@ -29,6 +29,7 @@ Instead of using `printf`-like formatting, `lpass-auth` instead uses
 more intuitive and user friendly.
 
 The format string supplies the following values:
+* password
 * accountID
 * digits
 * issuerName
@@ -42,8 +43,8 @@ The format string supplies the following values:
 
 For example:
 ```bash
-$ lpass-auth show --issuer LastPass \
---format "{accountID} ({login}): {password}" \
+lpass-auth show --issuer LastPass \
+--format "{accountID} ({login}): {password}"
 LastPass (example@example.com): 690420
 ```
 
