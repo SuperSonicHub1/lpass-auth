@@ -36,7 +36,8 @@ def main():
 		password = getpass("Master Password: ")
 		otp = input("OTP (if applicable): ")
 		try:
-			otp = int(otp)
+			# Verify it's an integer but don't change anything
+			int(otp)
 		except ValueError:
 			otp = None
 

@@ -24,7 +24,7 @@ class LastpassAuthClient:
 		self,
 		email: str,
 		password: str,
-		otp: Optional[int] = None,
+		otp: Optional[str] = None,
 		session: Session = create_default_session()
 	) -> None:
 		self.email = email
